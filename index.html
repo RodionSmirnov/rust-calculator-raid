@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rust • Калькулятор рейда</title><link rel="stylesheet" href="style.css"></head>
+<body><main><header><span class="tag">RUST / RAID PLANNER</span><h1>Сколько стоит<br><em>твой рейд?</em></h1><p>Выбери препятствия. Посчитай взрывчатку и ресурсы до выхода с базы.</p></header>
+<section class="planner"><div class="panel"><h2>01 <span>Цели рейда</span></h2><div id="targets"></div><button id="add" class="secondary">＋ Добавить цель</button><p class="hint">Количество взрывчатки округляется отдельно для каждого препятствия.</p></div>
+<div class="panel"><h2>02 <span>Чем рейдим</span></h2><div id="weapons" class="weapons"></div><div class="result"><span>ПОТРЕБУЕТСЯ</span><strong id="amount"></strong><div id="weapon-name"></div></div><div class="resources"><div><span>Сера всего</span><b id="sulfur"></b></div><div><span>Порох</span><b id="powder"></b></div><div><span>Уголь</span><b id="charcoal"></b></div></div><p class="hint">Сера всего уже включает серу для пороха. Не складывай эти значения.</p></div></section>
+<section class="panel"><h2>03 <span>Сравнение вариантов</span></h2><div class="table-wrap"><table><thead><tr><th>Взрывчатка</th><th>Количество</th><th>Сера всего</th><th>Порох</th></tr></thead><tbody id="comparison"></tbody></table></div></section>
+<footer>Базовые значения для ванильного Rust. Без учёта урона по области, сочетания оружия, модификаторов серверов и стоимости верстака. Для ракет и C4 также нужны другие компоненты. Перед дорогим рейдом проверь значения для текущего патча.</footer></main><script src="calculator.js"></script><script src="app.js"></script></body></html>
